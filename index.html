@@ -758,3 +758,598 @@
             background: rgba(255, 255, 255, 0.1);
             margin: 2rem 0;
         }
+
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .footer-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--primary);
+        }
+
+        .footer-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .hero {
+                height: 80vh;
+            }
+            
+            .slide-content {
+                left: 5%;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-img {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .features-list {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                margin-top: 5rem;
+                height: 70vh;
+            }
+            
+            .slide-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .carros-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            
+            .carro-actions {
+                flex-direction: column;
+            }
+            
+            .btn, .btn-secondary {
+                width: 100%;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-section:last-child {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .slide-content {
+                bottom: 10%;
+                max-width: 90%;
+            }
+            
+            .modal-content {
+                margin: 2rem;
+                padding: 2rem 1.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-car-side"></i>
+                <div>
+                    <h1>EcoDrive</h1>
+                    <p>Sustentabilidade sobre rodas</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#carros">Modelos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="pages/quiz.html" class="btn-quiz">Encontre Seu Carro</a></li>
+                </ul>
+            </nav>
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrossel Hero -->
+    <section class="hero">
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide fade active">
+                <img src="src/assets/images/carro/Carro1.jpg" alt="EcoDrive Model X" loading="lazy">
+                <div class="slide-content">
+                    <h2>Novo EcoDrive X</h2>
+                    <p>Autonomia de 550km | 0-100km/h em 3.8s</p>
+                    <a href="pages/quiz.html" class="btn">Solicitar Test Drive</a>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="src/assets/images/carro/Carro2.webp" alt="EcoDrive Model S" loading="lazy">
+                <div class="slide-content">
+                    <h2>EcoDrive S</h2>
+                    <p>Design premium | Tecnologia avançada</p>
+                    <a href="pages/quiz.html" class="btn">Solicitar Test Drive</a>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="src/assets/images/carro/Carro3.jpg" alt="EcoDrive Model C" loading="lazy">
+                <div class="slide-content">
+                    <h2>EcoDrive C</h2>
+                    <p>Compacto urbano | Perfeito para cidades</p>
+                    <a href="pages/quiz.html" class="btn">Solicitar Test Drive</a>
+                </div>
+            </div>
+            
+            <!-- Slide 4 (novo) -->
+            <div class="slide fade">
+                <img src="src/assets/images/carro/Carro4.jpg" alt="EcoDrive Model D" loading="lazy">
+                <div class="slide-content">
+                    <h2>EcoDrive D</h2>
+                    <p>Alto desempenho | Carregamento ultrarrápido</p>
+                    <a href="pages/quiz.html" class="btn">Solicitar Test Drive</a>
+                </div>
+            </div>
+            
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Seção Nossa Frota -->
+    <section id="carros" class="carros-section">
+        <div class="section-header">
+            <h2>Modelos </h2>
+            <p>Descubra o modelo perfeito para seu estilo de vida</p>
+        </div>
+        <div class="carros-grid">
+            <!-- Carro 1 -->
+            <div class="carro-card">
+                <div class="carro-img">
+                    <img src="src/assets/images/carro/Carro1.jpg" alt="EcoDrive A" loading="lazy">
+                    <div class="carro-tag">Mais Popular</div>
+                </div>
+                <div class="carro-info">
+                    <h3>EcoDrive A</h3>
+                    <div class="carro-specs">
+                        <span><i class="fas fa-bolt"></i> 350km autonomia</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 180km/h</span>
+                    </div>
+                    <p>O compacto perfeito para o dia a dia na cidade, com tecnologia inteligente e espaço otimizado.</p>
+                    <div class="carro-actions">
+                        <a href="pages/quiz.html" class="btn">Orçamento</a>
+                        <button class="btn-secondary" onclick="abrirModal('ecodrive-a')">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carro 2 -->
+            <div class="carro-card">
+                <div class="carro-img">
+                    <img src="src/assets/images/carro/Carro2.webp" alt="EcoDrive B" loading="lazy">
+                </div>
+                <div class="carro-info">
+                    <h3>EcoDrive B</h3>
+                    <div class="carro-specs">
+                        <span><i class="fas fa-bolt"></i> 420km autonomia</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 200km/h</span>
+                    </div>
+                    <p>Ideal para famílias, com amplo espaço interno, segurança de ponta e conectividade completa.</p>
+                    <div class="carro-actions">
+                        <a href="pages/quiz.html" class="btn">Orçamento</a>
+                        <button class="btn-secondary" onclick="abrirModal('ecodrive-b')">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carro 3 -->
+            <div class="carro-card">
+                <div class="carro-img">
+                    <img src="src/assets/images/carro/Carro3.jpg" alt="EcoDrive C" loading="lazy">
+                </div>
+                <div class="carro-info">
+                    <h3>EcoDrive C</h3>
+                    <div class="carro-specs">
+                        <span><i class="fas fa-bolt"></i> 480km autonomia</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 220km/h</span>
+                    </div>
+                    <p>Performance e sofisticação em um SUV premium 100% elétrico, feito para qualquer terreno.</p>
+                    <div class="carro-actions">
+                        <a href="pages/quiz.html" class="btn">Orçamento</a>
+                        <button class="btn-secondary" onclick="abrirModal('ecodrive-c')">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carro 4 -->
+            <div class="carro-card">
+                <div class="carro-img">
+                    <img src="src/assets/images/carro/Carro4.jpg" alt="EcoDrive D" loading="lazy">
+                </div>
+                <div class="carro-info">
+                    <h3>EcoDrive D</h3>
+                    <div class="carro-specs">
+                        <span><i class="fas fa-bolt"></i> 600km autonomia</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 250km/h</span>
+                    </div>
+                    <p>Modelo esportivo de alto desempenho com tecnologia de ponta e carregamento ultrarrápido.</p>
+                    <div class="carro-actions">
+                        <a href="pages/quiz.html" class="btn">Orçamento</a>
+                        <button class="btn-secondary" onclick="abrirModal('ecodrive-d')">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="sobre-section">
+        <div class="container">
+            <div class="sobre-container">
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre a EcoDrive</h2>
+                    <p>A Eco Drive é muito mais do que uma loja de carros elétricos é um centro de inovação dedicado a transformar a maneira como o mundo se move. Com um compromisso inabalável com a sustentabilidade, tecnologia de ponta e design futurista, a Eco Drive oferece veículos elétricos que unem desempenho excepcional e consciência ambiental. Cada modelo disponível na Eco Drive foi cuidadosamente selecionado para garantir eficiência energética, autonomia ampliada e conectividade inteligente. Além disso, a loja proporciona uma experiência de compra única, com espaços interativos que permitem aos clientes testarem os veículos, explorarem tecnologias avançadas e entenderem como a mobilidade elétrica pode beneficiar tanto o planeta quanto o bolso. Na Eco Drive, o futuro já chegou e ele é elétrico.</p>
+                    
+                    <ul class="sobre-list">
+                        <li><i class="fas fa-check-circle"></i> Pioneiros em mobilidade elétrica no Brasil</li>
+                        <li><i class="fas fa-check-circle"></i> Frota 100% sustentável</li>
+                        <li><i class="fas fa-check-circle"></i> Tecnologia de ponta</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                    </ul>
+                    
+                    <a href="#carros" class="btn btn-large">Conheça Nossos Modelos</a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-img">
+                    <img id="modal-imagem" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-descricao"></p>
+                    
+                    <div class="modal-specs">
+                        <h3>Especificações Técnicas</h3>
+                        <div class="specs-grid" id="modal-especificacoes">
+                            <!-- Preenchido via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="modal-features">
+                        <h3>Tecnologia e Conforto</h3>
+                        <ul class="features-list" id="modal-features">
+                            <!-- Preenchido via JavaScript -->
+                        </ul>
+                    </div>
+                    
+                    <div class="carro-actions" style="margin-top: 3rem;">
+                        <a href="pages/quiz.html" class="btn">Solicitar Test Drive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Revolucionando a Mobilidade</h2>
+                    <p>Na EcoDrive, não vendemos apenas carros elétricos - criamos uma nova forma de se relacionar com a mobilidade. Somos pioneiros em uma revolução silenciosa que está transformando o transporte no Brasil, combinando alta tecnologia, desempenho excepcional e responsabilidade ambiental.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h3>+ 100.000</h3>
+                            <p>carros vendidos</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>7</h3>
+                            <p>anos de garantia</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>+ 10.000</h3>
+                            <p>Carregadores de Rede Própria</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>App EcoDrive</h3>
+                            <p>Controle recarga, roteiros verdes e recompensas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div style="overflow-x: auto;">     
+            <div class="footer-bottom">
+                <p>© 2025 Guarulhos, São Paulo</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Controle do Carrossel
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active");
+        }
+
+        // Auto-avanço do carrossel
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000);
+
+        // Modal de Detalhes
+        function abrirModal(modelo) {
+            const modal = document.getElementById("modal");
+            const dadosCarro = obterDadosCarro(modelo);
+            
+            document.getElementById("modal-imagem").src = dadosCarro.imagem;
+            document.getElementById("modal-titulo").textContent = dadosCarro.titulo;
+            document.getElementById("modal-descricao").textContent = dadosCarro.descricao;
+            
+            const specsContainer = document.getElementById("modal-especificacoes");
+            specsContainer.innerHTML = '';
+            
+            dadosCarro.especificacoes.forEach(spec => {
+                specsContainer.innerHTML += `
+                    <div class="spec-item">
+                        <i class="${spec.icone}"></i>
+                        <span>${spec.nome}:</span> ${spec.valor}
+                    </div>
+                `;
+            });
+            
+            const featuresContainer = document.getElementById("modal-features");
+            featuresContainer.innerHTML = '';
+            
+            dadosCarro.features.forEach(feature => {
+                featuresContainer.innerHTML += `
+                    <li><i class="fas fa-check-circle"></i> ${feature}</li>
+                `;
+            });
+            
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function fecharModal() {
+            document.getElementById("modal").classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+
+        function obterDadosCarro(modelo) {
+            // Dados dos carros - pode ser movido para um JSON externo
+            const dados = {
+                'ecodrive-a': {
+                    imagem: 'src/assets/Eletricar-1.jpg',
+                    titulo: 'EcoDrive A',
+                    descricao: 'O compacto perfeito para o dia a dia na cidade, com tecnologia inteligente e espaço otimizado.',
+                    especificacoes: [
+                        { icone: 'fas fa-bolt', nome: 'Autonomia', valor: '350 km' },
+                        { icone: 'fas fa-tachometer-alt', nome: 'Velocidade Máxima', valor: '180 km/h' },
+                        { icone: 'fas fa-charging-station', nome: 'Tempo de Carga', valor: '6h (220V)' },
+                        { icone: 'fas fa-car', nome: 'Porte', valor: 'Compacto' },
+                        { icone: 'fas fa-users', nome: 'Capacidade', valor: '5 pessoas' },
+                        { icone: 'fas fa-battery-full', nome: 'Bateria', valor: '50 kWh' }
+                    ],
+                    features: [
+                        'Tela touchscreen 10"',
+                        'Piloto automático básico',
+                        'Conexão 4G',
+                        'Carregamento rápido (80% em 30min)',
+                        'Sistema de som premium',
+                        'Assistente de voz',
+                        'Câmera de ré',
+                        'Sensores de estacionamento'
+                    ]
+                },
+                'ecodrive-b': {
+                    imagem: 'src/assets/Eletricar-2.jpg',
+                    titulo: 'EcoDrive B',
+                    descricao: 'Ideal para famílias, com amplo espaço interno, segurança de ponta e conectividade completa.',
+                    especificacoes: [
+                        { icone: 'fas fa-bolt', nome: 'Autonomia', valor: '420 km' },
+                        { icone: 'fas fa-tachometer-alt', nome: 'Velocidade Máxima', valor: '200 km/h' },
+                        { icone: 'fas fa-charging-station', nome: 'Tempo de Carga', valor: '7h (220V)' },
+                        { icone: 'fas fa-car', nome: 'Porte', valor: 'Médio' },
+                        { icone: 'fas fa-users', nome: 'Capacidade', valor: '5 pessoas' },
+                        { icone: 'fas fa-battery-full', nome: 'Bateria', valor: '60 kWh' }
+                    ],
+                    features: [
+                        'Tela touchscreen 12"',
+                        'Piloto automático avançado',
+                        'Conexão 5G',
+                        'Carregamento rápido (80% em 35min)',
+                        'Sistema de som premium',
+                        'Assistente de voz',
+                        'Câmera 360°',
+                        'Sensores de estacionamento',
+                        'Teto solar panorâmico',
+                        'Porta-malas 450L'
+                    ]
+                },
+                'ecodrive-c': {
+                    imagem: 'src/assets/Eletricar-3.jpg',
+                    titulo: 'EcoDrive C',
+                    descricao: 'Performance e sofisticação em um SUV premium 100% elétrico, feito para qualquer terreno.',
+                    especificacoes: [
+                        { icone: 'fas fa-bolt', nome: 'Autonomia', valor: '480 km' },
+                        { icone: 'fas fa-tachometer-alt', nome: 'Velocidade Máxima', valor: '220 km/h' },
+                        { icone: 'fas fa-charging-station', nome: 'Tempo de Carga', valor: '8h (220V)' },
+                        { icone: 'fas fa-car', nome: 'Porte', valor: 'SUV' },
+                        { icone: 'fas fa-users', nome: 'Capacidade', valor: '7 pessoas' },
+                        { icone: 'fas fa-battery-full', nome: 'Bateria', valor: '75 kWh' }
+                    ],
+                    features: [
+                        'Tela touchscreen 15"',
+                        'Piloto automático completo',
+                        'Conexão 5G+',
+                        'Carregamento rápido (80% em 40min)',
+                        'Sistema de som premium 3D',
+                        'Assistente de voz inteligente',
+                        'Câmera 360° com visão noturna',
+                        'Sensores de estacionamento automático',
+                        'Teto solar panorâmico',
+                        'Porta-malas 550L',
+                        'Tração integral elétrica',
+                        'Suspensão a ar adaptativa'
+                    ]
+                },
+                'ecodrive-d': {
+                    imagem: 'src/assets/images/carros/Eletricar-4.jpg',
+                    titulo: 'EcoDrive D',
+                    descricao: 'Modelo esportivo de alto desempenho com tecnologia de ponta e carregamento ultrarrápido.',
+                    especificacoes: [
+                        { icone: 'fas fa-bolt', nome: 'Autonomia', valor: '600 km' },
+                        { icone: 'fas fa-tachometer-alt', nome: 'Velocidade Máxima', valor: '250 km/h' },
+                        { icone: 'fas fa-charging-station', nome: 'Tempo de Carga', valor: '15min (80%)' },
+                        { icone: 'fas fa-car', nome: 'Porte', valor: 'Esportivo' },
+                        { icone: 'fas fa-users', nome: 'Capacidade', valor: '4 pessoas' },
+                        { icone: 'fas fa-battery-full', nome: 'Bateria', valor: '100 kWh' }
+                    ],
+                    features: [
+                        'Tela touchscreen 17" curva',
+                        'Piloto automático completo',
+                        'Conexão 5G+',
+                        'Carregamento ultrarrápido (80% em 15min)',
+                        'Sistema de som premium 3D',
+                        'Assistente de voz inteligente',
+                        'Câmeras 360° com visão noturna',
+                        'Modo Track para pistas',
+                        'Freios carbono-cerâmicos',
+                        'Aerodinâmica ativa',
+                        'Portas estilo asa de gaivota',
+                        'Interior em fibra de carbono'
+                    ]
+                }
+            };
+            
+            return dados[modelo] || dados['ecodrive-a'];
+        }
+
+        // Suavizar rolagem para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Ajuste para o header fixo
+                        behavior: 'smooth'
+                    });
+                    
+                    // Atualizar URL sem recarregar a página
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        location.hash = targetId;
+                    }
+                }
+            });
+        });
+
+        // Fechar menu mobile ao clicar em um link (se aplicável)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.querySelector('.nav');
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal");
+            if (event.target == modal) {
+                fecharModal();
+            }
+        }
+    </script>
+</body>
+</html>        

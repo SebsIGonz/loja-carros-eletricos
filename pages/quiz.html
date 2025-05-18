@@ -424,8 +424,8 @@
                 <h2>Sua Recomendação Personalizada</h2>
                 
                 <div class="car-recommendation">
-                    <h3 class="car-model" id="carModel">EcoDrive Bind</h3>
-                    <img src="../src/assets/modelo-a.jpg" alt="Carro Recomendado" class="car-image" id="carImage">
+                    <h3 class="car-model" id="carModel">EcoDrive A</h3>
+                    <img src="../src/assets/images/carro/Carro1.jpg" alt="Carro Recomendado" class="car-image" id="carImage">
                     
                     <div class="car-features">
                         <span class="feature" id="feature1">350km autonomia</span>
@@ -434,7 +434,7 @@
                     </div>
                     
                     <p class="car-description" id="carDescription">
-                        O EcoDrive Bind é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.
+                        O EcoDrive A é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.
                     </p>
                     
                     <div class="action-buttons">
@@ -446,7 +446,39 @@
         </div>
     </main>
 
-    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>EcoDrive</h3>
+                <p>Líder em mobilidade elétrica na América Latina, oferecendo tecnologia e sustentabilidade sobre rodas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#carros">Modelos</a></li>
+                    <li><a href="../index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="quiz.html">Encontre Seu Carro</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo</li>
+                    <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                    <li><i class="fas fa-envelope"></i> contato@ecodrive.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 EcoDrive. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -456,13 +488,13 @@
                 let answeredQuestions = 0;
                 
                 for (let i = 1; i <= totalQuestions; i++) {
-                    if (document.querySelector(input[name="q${i}"]:checked)) {
+                    if (document.querySelector(`input[name="q${i}"]:checked`)) {
                         answeredQuestions++;
                     }
                 }
                 
                 const progress = (answeredQuestions / totalQuestions) * 100;
-                document.getElementById('progressBar').style.width = ${progress}%;
+                document.getElementById('progressBar').style.width = `${progress}%`;
             }
             
             // Atualiza o progresso quando uma resposta é selecionada
@@ -479,10 +511,10 @@
                 
                 // Verifica se todas as perguntas foram respondidas
                 for (let i = 1; i <= totalQuestions; i++) {
-                    const questionContainer = document.getElementById(q${i}-container);
+                    const questionContainer = document.getElementById(`q${i}-container`);
                     const errorMessage = questionContainer.querySelector('.error-message');
                     
-                    if (!document.querySelector(input[name="q${i}"]:checked)) {
+                    if (!document.querySelector(`input[name="q${i}"]:checked`)) {
                         questionContainer.style.borderLeft = '3px solid #D63031';
                         errorMessage.style.display = 'block';
                         allAnswered = false;
@@ -512,35 +544,35 @@
                 };
                 
                 // Lógica de recomendação aprimorada
-                let carModel = "EcoDrive Bind";
+                let carModel = "EcoDrive A";
                 let carImage = "../src/assets/images/carro/Carro1.jpg";
                 let features = ["350km autonomia", "Carregamento rápido", "Tecnologia básica"];
-                let description = "O EcoDrive Bind é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.";
+                let description = "O EcoDrive A é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.";
                 
                 // Baseado no orçamento (Pergunta 7)
                 if (answers.q7 === "250k") {
-                    carModel = "EcoDrive Fracture";
+                    carModel = "EcoDrive B";
                     carImage = "../src/assets/images/carro/Carro2.webp";
                     features = ["400km autonomia", "Espaço para família", "Tecnologia intermediária"];
-                    description = "O EcoDrive Fracture oferece o equilíbrio perfeito entre espaço e eficiência, ideal para famílias que buscam conforto e praticidade.";
+                    description = "O EcoDrive B oferece o equilíbrio perfeito entre espaço e eficiência, ideal para famílias que buscam conforto e praticidade.";
                 } 
                 else if (answers.q7 === "400k") {
-                    carModel = "EcoDrive Split";
+                    carModel = "EcoDrive C";
                     carImage = "../src/assets/images/carro/Carro3.jpg";
                     features = ["500km autonomia", "Interior premium", "Tecnologia avançada"];
-                    description = "O EcoDrive Split combina luxo e desempenho, com interior premium e tecnologia de ponta para quem exige o melhor.";
+                    description = "O EcoDrive C combina luxo e desempenho, com interior premium e tecnologia de ponta para quem exige o melhor.";
                 }
                 else if (answers.q7 === "400k+") {
-                    carModel = "EcoDrive Sunset";
-                    carImage = "../src/assets/images/carro/4.jpg";
+                    carModel = "EcoDrive Premium";
+                    carImage = "../src/assets/images/carro/Carro4.jpg";
                     features = ["600km autonomia", "0-100km/h em 3.2s", "Tecnologia completa"];
-                    description = "O topo de linha da EcoDrive Sunset, com performance esportiva e todos os recursos de tecnologia disponíveis no mercado.";
+                    description = "O topo de linha da EcoDrive, com performance esportiva e todos os recursos de tecnologia disponíveis no mercado.";
                 }
                 
                 // Ajustes baseados no uso principal (Pergunta 1)
                 if (answers.q1 === "family") {
                     if (answers.q7 === "150k") {
-                        carModel = "EcoDrive Ascent";
+                        carModel = "EcoDrive Family";
                         features[2] = "Assentos infantis ISOFIX";
                         description = "Versão especial para famílias, com assentos infantis e espaço extra para carrinhos de bebê.";
                     } else {
@@ -586,7 +618,7 @@
                 
                 // Atualiza os features
                 features.forEach((feature, index) => {
-                    const featureElement = document.getElementById(feature${index + 1});
+                    const featureElement = document.getElementById(`feature${index + 1}`);
                     if (featureElement) {
                         featureElement.textContent = feature;
                     }

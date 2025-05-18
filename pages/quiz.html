@@ -424,7 +424,7 @@
                 <h2>Sua Recomendação Personalizada</h2>
                 
                 <div class="car-recommendation">
-                    <h3 class="car-model" id="carModel">EcoDrive A</h3>
+                    <h3 class="car-model" id="carModel">EcoDrive Bind</h3>
                     <img src="../src/assets/modelo-a.jpg" alt="Carro Recomendado" class="car-image" id="carImage">
                     
                     <div class="car-features">
@@ -434,7 +434,7 @@
                     </div>
                     
                     <p class="car-description" id="carDescription">
-                        O EcoDrive A é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.
+                        O EcoDrive Bind é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.
                     </p>
                     
                     <div class="action-buttons">
@@ -512,29 +512,29 @@
                 };
                 
                 // Lógica de recomendação aprimorada
-                let carModel = "EcoDrive A";
+                let carModel = "EcoDrive Bind";
                 let carImage = "../src/assets/images/carro/Carro1.jpg";
                 let features = ["350km autonomia", "Carregamento rápido", "Tecnologia básica"];
-                let description = "O EcoDrive A é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.";
+                let description = "O EcoDrive Bind é perfeito para o dia a dia na cidade, com autonomia de 350km e tamanho compacto que facilita o estacionamento.";
                 
                 // Baseado no orçamento (Pergunta 7)
                 if (answers.q7 === "250k") {
-                    carModel = "EcoDrive B";
+                    carModel = "EcoDrive Fracture";
                     carImage = "../src/assets/images/carro/Carro2.webp";
                     features = ["400km autonomia", "Espaço para família", "Tecnologia intermediária"];
-                    description = "O EcoDrive B oferece o equilíbrio perfeito entre espaço e eficiência, ideal para famílias que buscam conforto e praticidade.";
+                    description = "O EcoDrive Fracture oferece o equilíbrio perfeito entre espaço e eficiência, ideal para famílias que buscam conforto e praticidade.";
                 } 
                 else if (answers.q7 === "400k") {
-                    carModel = "EcoDrive C";
+                    carModel = "EcoDrive Split";
                     carImage = "../src/assets/images/carro/Carro3.jpg";
                     features = ["500km autonomia", "Interior premium", "Tecnologia avançada"];
-                    description = "O EcoDrive C combina luxo e desempenho, com interior premium e tecnologia de ponta para quem exige o melhor.";
+                    description = "O EcoDrive Split combina luxo e desempenho, com interior premium e tecnologia de ponta para quem exige o melhor.";
                 }
                 else if (answers.q7 === "400k+") {
-                    carModel = "EcoDrive Premium";
+                    carModel = "EcoDrive Sunset";
                     carImage = "../src/assets/images/carro/4.jpg";
                     features = ["600km autonomia", "0-100km/h em 3.2s", "Tecnologia completa"];
-                    description = "O topo de linha da EcoDrive, com performance esportiva e todos os recursos de tecnologia disponíveis no mercado.";
+                    description = "O topo de linha da EcoDrive Sunset, com performance esportiva e todos os recursos de tecnologia disponíveis no mercado.";
                 }
                 
                 // Ajustes baseados no uso principal (Pergunta 1)
